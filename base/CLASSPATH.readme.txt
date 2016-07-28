@@ -1,0 +1,11 @@
+在JDK1.5之前，我们需要使用在加一个环境变量CLASSPATH，根据CLASSPATH环境变量定位类。
+
+当我们使用java java类名 命令来运行java程序时，jre会去CLASSPATH下去搜索java类。
+所以1.4以前版本的jdk需要在CLASSPATH中加入.来告诉jre去当前目录下搜索java类，
+所以1.4以前版本通常将CLASSPATH设置为.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
+
+所以1.5以上的版本是不需要CLASSPATH也可以运行程序的，jre会自动搜索当前路径下的类文件，
+而且使用java的编译和运行工具时，系统可以自动加载dt.jar和tools.jar
+
+但是jdk1.5以上版本运行jdk，也可以设置CLASSPATH环境变量，设置了CLASSPATH环境变量后，
+就不会使用系统之前默认的去搜寻类。
